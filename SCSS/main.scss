@@ -1,0 +1,62 @@
+@import "_resets";
+@import "_colors";
+@import "_mixins";
+@import "_fonts";
+
+
+.mainContainer {
+    @include flexRow;
+    @include font300;
+    height: 100vh;
+    width: 100vw;
+}
+
+.material-icons {
+    color: $primaryColor;
+    margin: 10px;
+}
+.fa {
+    color: $primaryColor;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.sidenav {
+    @include flexColumn;
+    @include font700;
+    justify-content: space-between;
+    position: static;
+    left: 0px;
+    top: 0px;
+    width: 80px;
+    height: 100%;
+    padding: 20px 0 20px 0;
+    background-color: $bgColor;
+    h1 {
+        color: $primaryColor;
+        font-size: 1.5rem;
+    }
+    h1, ul, li, a {
+        background: transparent;
+    }
+    li a:hover {
+        color: $secondaryColor;
+    }
+}
+
+.content {
+    @include flexColumn;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.footer {
+    @include flexRow;
+    @include font300;
+    position: absolute;
+    bottom: 10px;
+    p {
+        font-size: 0.7rem;
+    }
+}

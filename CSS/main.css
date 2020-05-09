@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: calc(12px + 0.278vw);
+  background-color: #333333;
+  color: #e6e6e6;
+}
+
+@media screen and (max-width: 600px) {
+  * body {
+    font-size: 12px;
+  }
+}
+
+.mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  height: 100vh;
+  width: 100vw;
+}
+
+.material-icons {
+  color: #f3442c;
+  margin: 10px;
+}
+
+.fa {
+  color: #f3442c;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.sidenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: static;
+  left: 0px;
+  top: 0px;
+  width: 80px;
+  height: 100%;
+  padding: 20px 0 20px 0;
+  background-color: #292929;
+}
+
+.sidenav h1 {
+  color: #f3442c;
+  font-size: 1.5rem;
+}
+
+.sidenav h1, .sidenav ul, .sidenav li, .sidenav a {
+  background: transparent;
+}
+
+.sidenav li a:hover {
+  color: #026396;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  bottom: 10px;
+}
+
+.footer p {
+  font-size: 0.7rem;
+}
+/*# sourceMappingURL=main.css.map */
