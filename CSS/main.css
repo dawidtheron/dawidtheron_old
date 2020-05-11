@@ -28,14 +28,44 @@
   width: 100vw;
 }
 
-.material-icons {
+#menu1 li {
+  text-align: center;
+  position: relative;
+}
+
+#menu1 li a {
+  position: absolute;
+  top: 10px;
+  left: -25px;
+  opacity: 0;
+  height: 30px;
+  width: 100px;
+  padding: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
   color: #f3442c;
+  cursor: pointer;
+}
+
+#menu1 li a:hover {
+  opacity: 1;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.material-icons {
+  background: transparent;
+  color: #f3442c;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
   margin: 10px;
+  opacity: 1;
 }
 
 .fa {
   color: #f3442c;
-  font-size: 1.5rem;
+  font-size: 20px;
   margin: 10px;
 }
 
@@ -61,7 +91,7 @@
   position: static;
   left: 0px;
   top: 0px;
-  width: 80px;
+  width: 100px;
   height: 100%;
   padding: 20px 0 20px 0;
   background-color: #292929;
@@ -72,12 +102,8 @@
   font-size: 1.5rem;
 }
 
-.sidenav h1, .sidenav ul, .sidenav li, .sidenav a {
+.sidenav h1, .sidenav ul, .sidenav li, .sidenav a, .sidenav p {
   background: transparent;
-}
-
-.sidenav li a:hover {
-  color: #026396;
 }
 
 .content {
