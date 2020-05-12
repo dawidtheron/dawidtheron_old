@@ -5,7 +5,8 @@
     padding: 0;
     font-size: calc(12px + 0.278vw);
     background-color: $bgColor2;
-    color: $lightColor;
+    background: $bgColor1;
+    color: $lightColor1;
 
     @media screen and (max-width: 600px) {
         body {

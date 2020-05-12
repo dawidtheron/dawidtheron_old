@@ -4,14 +4,84 @@
   margin: 0;
   padding: 0;
   font-size: calc(12px + 0.278vw);
-  background-color: #333333;
-  color: #e6e6e6;
+  background-color: #252525;
+  background: #292929;
+  color: #E5E5E5;
 }
 
 @media screen and (max-width: 600px) {
   * body {
     font-size: 12px;
   }
+}
+
+/* @mixin menu-overlay {
+    transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1111;
+} */
+.menu-list a:hover {
+  color: #4C7BF3;
+}
+
+.hamburger-menu:focus {
+  outline: none;
+}
+
+.hamburger-menu span:before {
+  top: -7px;
+}
+
+.hamburger-menu span:after {
+  bottom: -7px;
+}
+
+.hamburger-menu span:before, .hamburger-menu span:after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+}
+
+.hamburger-menu span:before {
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, -webkit-transform;
+  transition-property: top, transform;
+  transition-property: top, transform, -webkit-transform;
+}
+
+.hamburger-menu span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+  transition-property: bottom, transform, -webkit-transform;
+}
+
+.hamburger-menu.active span {
+  background: none;
+}
+
+.hamburger-menu.active span:before {
+  top: 0;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.hamburger-menu.active span:after {
+  bottom: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.hamburger-menu.active span:before, .hamburger-menu.active span:after {
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
 }
 
 .mainContainer {
@@ -28,48 +98,8 @@
   width: 100vw;
 }
 
-#menu1 li {
-  text-align: center;
+.sidebar {
   position: relative;
-}
-
-#menu1 li a {
-  position: absolute;
-  top: 10px;
-  left: -25px;
-  opacity: 0;
-  height: 30px;
-  width: 100px;
-  padding: 5px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
-  color: #f3442c;
-  cursor: pointer;
-}
-
-#menu1 li a:hover {
-  opacity: 1;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-
-.material-icons {
-  background: transparent;
-  color: #f3442c;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  margin: 10px;
-  opacity: 1;
-}
-
-.fa {
-  color: #f3442c;
-  font-size: 20px;
-  margin: 10px;
-}
-
-.sidenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,27 +113,281 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+  width: 390px;
+  text-align: right;
+}
+
+.sidebar h2 {
   font-family: 'Ubuntu', sans-serif;
-  font-weight: 700;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: static;
-  left: 0px;
-  top: 0px;
-  width: 100px;
-  height: 100%;
-  padding: 20px 0 20px 0;
-  background-color: #292929;
-}
-
-.sidenav h1 {
-  color: #f3442c;
+  font-weight: 500;
   font-size: 1.5rem;
+  margin-top: 10px;
+  width: 100%;
+  color: #777777;
 }
 
-.sidenav h1, .sidenav ul, .sidenav li, .sidenav a, .sidenav p {
+.sidebar h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-top: 22px;
+  width: 100%;
+}
+
+.sidebar h4 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 15px;
+  width: 100%;
+  color: #777777;
+}
+
+.sidebar footer {
+  position: absolute;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  margin-top: 15px;
+  bottom: 10px;
+  right: 15px;
+  color: #777777;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+  width: 100px;
+  background-color: #252525;
+  padding: 5px;
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+}
+
+.email {
+  display: inline-block;
+  padding: 20px;
+  width: 100%;
   background: transparent;
+}
+
+.email i {
+  font-size: 24px;
+  color: #4C7BF3;
+}
+
+.main-nav {
+  background: transparent;
+}
+
+.hamburger-menu-wrapper {
+  background: transparent;
+  padding: 20px;
+  width: 100%;
+  display: inline-block;
+}
+
+.hamburger-menu-wrapper.bounce-effect {
+  -webkit-animation: bounce 0.3s ease 1;
+          animation: bounce 0.3s ease 1;
+}
+
+/* .menu-overlay {
+    @include menu-overlay;
+} */
+.menu {
+  position: relative;
+  min-width: 100px;
+  text-align: center;
+  background: transparent;
+}
+
+.hamburger-menu {
+  border: 0;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  z-index: 9999;
+  cursor: pointer;
+  background: transparent;
+}
+
+.menu-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 9999;
+  background: transparent;
+}
+
+.menu-list a {
+  color: #E5E5E5;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 15px 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.menu-list a:hover {
+  color: #4C7BF3;
+  background: transparent;
+}
+
+.hamburger-menu:focus {
+  outline: none;
+}
+
+.hamburger-menu span {
+  display: block;
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  right: 5px;
+  height: 2px;
+  background: #4C7BF3;
+}
+
+.hamburger-menu span:before, .hamburger-menu span:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4C7BF3;
+  content: "";
+}
+
+.hamburger-menu span:before {
+  top: -7px;
+}
+
+.hamburger-menu span:after {
+  bottom: -7px;
+}
+
+.hamburger-menu span:before, .hamburger-menu span:after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+}
+
+.hamburger-menu span:before {
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, -webkit-transform;
+  transition-property: top, transform;
+  transition-property: top, transform, -webkit-transform;
+}
+
+.hamburger-menu span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+  transition-property: bottom, transform, -webkit-transform;
+}
+
+.hamburger-menu.active span {
+  background: none;
+}
+
+.hamburger-menu.active span:before {
+  top: 0;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.hamburger-menu.active span:after {
+  bottom: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.hamburger-menu.active span:before, .hamburger-menu.active span:after {
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  45% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  90% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  45% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  90% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+.social {
+  color: #4C7BF3;
+  font-size: 24px;
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  background: transparent;
+}
+
+.social a {
+  padding: 10px;
+  background: transparent;
+  color: #4C7BF3;
 }
 
 .content {
