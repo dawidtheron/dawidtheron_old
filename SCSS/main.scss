@@ -1,197 +1,53 @@
-@import "_resets";
-@import "_colors";
-@import "_mixins";
-@import "_fonts";
+body {
+    background-color: #333;
+}
+#sidebarFixed {
+    background-color: #fecb00;
+}
+#navbarNav {
+    background-color: #fecb00;
+}
 
-// MAIN WRAPPER
-
-.mainContainer {
-    @include flexRow;
-    @include font300;
+#sidebarFixed {
+    display: block;
+    padding: 0;
+    max-width: 50px;
+}
+#navbutton {
+    font-size: 1rem;
+    border: none;
+}
+#navbarNav {
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
     height: 100vh;
-    width: 100vw;
+    width: 0px;
+    padding-top: 40px;
 }
-
-// SIDEBAR 
-
-.sidebar {
-    position: relative;
-    @include flexColumn;
-    justify-content: flex-start;
-    padding: 10px;
-    width: 390px;
-    text-align: right;
-    h2 {
-        @include font500;
-        font-size: 1.5rem;
-        margin-top: 10px;
-        width: 100%;
-        color: $lightColor2;
-    }
-    h1 {
-        @include font300;
-        font-size: 2rem;
-        margin-top: 22px;
-        width: 100%;
-    }
-    h4 {
-        @include font300;
-        font-size: 1rem;
-        margin-top: 15px;
-        width: 100%;
-        color: $lightColor2;
-    }
-    footer {
-        position: absolute;
-        @include font300;
-        font-size: 0.75rem;
-        margin-top: 15px;
-        bottom: 10px;
-        right: 15px;
-        color: $lightColor2;
+#navbarNav.in {
+    width: 30vw;
+    @media screen and (max-width:375px) {
+        width:50vw;
     }
 }
-
-// NAVIGATION COLUMN
-
-.nav {
-    @include flexColumn;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100px;
-    background-color: $bgColor2;
-    padding: 5px;
-    position: relative;
-    z-index: 1000;
+.navbar-nav a {
+    font-size: calc(12px + 3vw);
+}
+#mail1 {
     text-align: center;
-}
-
-// EMAIL OPTION
-
-.email {
-    display: inline-block;
-    padding: 20px;
-    width: 100%;
-    background: transparent;
-    i {
-       font-size: 24px; 
-       color: $primaryColor;
-    }
-    
-}
-
-// MAIN MENU
-
-.main-nav {
-    background: transparent;
-}
-.hamburger-menu-wrapper {
-    @include hamburger-menu-wrapper;
-}
-.hamburger-menu-wrapper.bounce-effect {
-    @include hamburger-menu-effect;
-}
-
-// MENU OVERLAY OPTIONAL
-
-/* .menu-overlay {
-    @include menu-overlay;
-} */
-
-
-.menu {
-    @include menu;
-}
-.hamburger-menu {
-    @include hamburger-menu;
-}
-.menu-list {
-    @include menu-list;
-}
- 
-.menu-list a {
-    @include menu-list-a;
-} 
-.menu-list a:hover {
-    color: $primaryColor;
-    background: transparent;
-}
-.hamburger-menu:focus {
-    outline: none;
-}
-.hamburger-menu span {
-    @include hamburger-menu-span;
-}
-.hamburger-menu span:before, .hamburger-menu span:after {
-    @include hamburger-menu-before-after;
-} 
-.hamburger-menu span:before {
-    top: -7px;
-}
-.hamburger-menu span:after {
-    bottom: -7px;
-}
-.hamburger-menu span:before, .hamburger-menu span:after {
-    transition-duration: 0.3s, 0.3s;
-    transition-delay: 0.3s, 0s;
-}
-  
-.hamburger-menu span:before { 
-    transition-property: top, transform;
-}
-.hamburger-menu span::after {
-    transition-property: bottom, transform;
-}
-.hamburger-menu.active span {
-    background: none;
-}
-.hamburger-menu.active span:before {
-    top: 0;
-    transform: rotate(225deg);
-}
-  
-.hamburger-menu.active span:after {
-    bottom: 0;
-    transform: rotate(135deg);
-}
-
-.hamburger-menu.active span:before, .hamburger-menu.active span:after {
-    transition-delay: 0s, 0.3s;
-}
-@keyframes 
-    bounce {  0% {
-        transform: rotate(0);
-    }
-    45% {
-        transform: rotate(15deg);
-    }
-    90% {
-        transform: rotate(-7deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
-}
- 
-.social {
-    @include social;
-}
-
-// main Content
-.content {
-    @include flexColumn;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-}
-
-// footer
-.footer {
-    @include flexRow;
-    @include font300;
+    font-size: x-large;
     position: absolute;
     bottom: 10px;
-    p {
-        font-size: 0.7rem;
-    }
+    left: 0;
+    right: 0;
+}
+#main {
+    height:100vh;
+    width: calc(100vw - 50px);
+    margin-left: 50px;
 }
