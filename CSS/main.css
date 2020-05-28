@@ -16,11 +16,6 @@ body {
   max-width: 50px;
 }
 
-#navbutton {
-  font-size: 1rem;
-  border: none;
-}
-
 #navbarNav {
   -webkit-transition: width 1s ease;
   transition: width 1s ease;
@@ -44,8 +39,16 @@ body {
   }
 }
 
-.navbar-nav a {
+.nav-item a {
   font-size: calc(12px + 3vw);
+}
+
+.nav-item-dropdown {
+  font-size: calc(12px + 3vw);
+}
+
+.dropdown-menu a {
+  font-size: calc(12px + 1vw);
 }
 
 #mail1 {
@@ -61,7 +64,7 @@ body {
   height: 100vh;
   width: calc(100vw - 50px);
   margin-left: 50px;
-  background-image: url(/assets/img/christopher-gower-m_HRfLhgABo-unsplash.jpg);
+  background-image: url(/assets/img/html-code.webp);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,6 +113,6 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=main.css.map */
