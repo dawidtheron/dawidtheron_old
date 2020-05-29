@@ -5,12 +5,14 @@
         e.preventDefault();
         if ($(this).hasClass('active')){
             $(this).removeClass('active');
-            $('.menu-overlay').fadeToggle( 'fast', 'linear' );
+            $('#splashText').css('top','50%').css('filter','blur(0px)');
+            $('.menu-overlay').fadeToggle( 'fast', 'swing' );
             $('.menu .menu-list').slideToggle( 'slow', 'swing' );
             $('.hamburger-menu-wrapper').toggleClass('bounce-effect');
         } else {
             $(this).addClass('active');
-            $('.menu-overlay').fadeToggle( 'fast', 'linear' );
+            $('#splashText').css('top','90%').css('filter','blur(4px)');
+            $('.menu-overlay').fadeToggle( 'fast', 'swing' );
             $('.menu .menu-list').slideToggle( 'slow', 'swing' );
             $('.hamburger-menu-wrapper').toggleClass('bounce-effect');
         }
