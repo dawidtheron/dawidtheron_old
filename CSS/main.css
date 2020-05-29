@@ -64,7 +64,7 @@ body {
   height: 100vh;
   width: calc(100vw - 50px);
   margin-left: 50px;
-  background-image: url(/assets/img/html-code.webp);
+  background-image: url(/assets/img/html-code.webp), url(/assets/img/html-code.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
