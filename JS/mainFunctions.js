@@ -11,7 +11,7 @@
             $('.hamburger-menu-wrapper').toggleClass('bounce-effect');
         } else {
             $(this).addClass('active');
-            $('#splashText').css('top','90%').css('filter','blur(4px)');
+            $('#splashText').css('top','85%').css('filter','blur(4px)');
             $('.menu-overlay').fadeToggle( 'fast', 'swing' );
             $('.menu .menu-list').slideToggle( 'slow', 'swing' );
             $('.hamburger-menu-wrapper').toggleClass('bounce-effect');
