@@ -17,10 +17,3 @@ $(document).ready(function () {
         }
     })
 })
-
-
-/* <div id="content">
-<div class="col text-center" id="splashText">
-  <h1 class="display-4 text-break">Front-end Developer</h1>
-  <p class="lead text-break">freelance user interface design & front-end development by Dawid Theron</p>        
-</div> */
