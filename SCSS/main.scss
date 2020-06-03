@@ -1,181 +1,168 @@
 body {
-    background-color: #222222;
+  background-color: #222222;
 }
 /* MENU */
 
-.fa-whatsapp {
-  color: #02D5FD;
-  font-size: 24px;
-  padding: 10px;
-}
-.fa-envelope {
-  color: #02D5FD;
-  font-size: 24px;
-  padding: 10px;
-}
 .hamburger-menu-wrapper {
-  position: relative;
-  background: #222222;
-  padding: 10px 20px;
+margin-top: 5px;
+background: #222222;
+padding: 10px;
+display: inline-block;
 }
 .hamburger-menu-wrapper.bounce-effect { animation: bounce 0.3s ease 1; }
 
 .menu-overlay {
-  transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.8);
-  display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1111;
+transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.8);
+display: none;
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background: rgba(0, 0, 0, 0.5);
+z-index: 1111;
 }
 .menu {
-  position: relative;
-  min-width: 220px;
-  text-align: center;
+position: relative;
+min-width: 220px;
+text-align: center;
 }
 .hamburger-menu {
-  border: 0;
-  margin-left: 0;
-  margin-right: 0;
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50;
-  transform: translate(-50%,-50%);
-  overflow: hidden;
-  padding: 0;
-  width: 36px;
-  height: 36px;
-  font-size: 0;
-  text-indent: -9999px;
-  cursor: pointer;
-  z-index: 9999;
-  cursor: pointer;
-  background: transparent;
+border: 0;
+margin: 0 auto;
+display: block;
+position: relative;
+overflow: hidden;
+padding: 0;
+width: 36px;
+height: 36px;
+font-size: 0;
+text-indent: -9999px;
+cursor: pointer;
+z-index: 9999;
+cursor: pointer;
+background: transparent;
 }
 .menu-list {
-  display: none;
-  position: absolute;
-  top: calc(100% + 40px);
-  width: 100%;
-  text-align: center;
-  z-index: 9999;
+display: none;
+position: absolute;
+top: calc(100% + 40px);
+width: 100%;
+text-align: center;
+z-index: 9999;
 }
 .dropdown-menu {
-  text-align: center;
-  border-top: 1px solid #02D5FD;
-  background: transparent;
-  width: 100%;
+text-align: center;
+border-top: 1px solid #02D5FD;
+background: transparent;
+width: 100%;
 }
 .dropdown-item {
-  background: transparent;
+background: transparent;
 }
 .dropdown-item:hover {
-  background: transparent;
+background: transparent;
 }
 .menu-list a {
-  color: #C6D2D6;
-  text-decoration: none;
-  font-size: 18px;
-  display: inline-block;
-  margin: 15px 0;
-  transition: all 0.5s ease;
+color: #C6D2D6;
+text-decoration: none;
+font-size: 18px;
+display: inline-block;
+margin: 15px 0;
+transition: all 0.5s ease;
 }
 .menu-list a:hover { color: #02D5FD; }
 .hamburger-menu:focus { outline: none; }
 .hamburger-menu span {
-  display: block;
-  position: absolute;
-  top: 17px;
-  left: 5px;
-  right: 5px;
-  height: 2px;
-  background: #02D5FD;
+display: block;
+position: absolute;
+top: 17px;
+left: 5px;
+right: 5px;
+height: 2px;
+background: #02D5FD;
 }
 .hamburger-menu span:before, .hamburger-menu span:after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #02D5FD;
-  content: "";
+position: absolute;
+display: block;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: #02D5FD;
+content: "";
 }
 .hamburger-menu span:before { top: -7px; }
 .hamburger-menu span:after { bottom: -7px; }
 .hamburger-menu span:before, .hamburger-menu span:after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
+transition-duration: 0.3s, 0.3s;
+transition-delay: 0.3s, 0s;
 }
 .hamburger-menu span:before { transition-property: top, transform; }
 .hamburger-menu span::after { transition-property: bottom, transform; }
 .hamburger-menu.active span { background: none; }
 .hamburger-menu.active span:before {
-  top: 0;
-  transform: rotate(225deg);
+top: 0;
+transform: rotate(225deg);
 }
 .hamburger-menu.active span:after {
-  bottom: 0;
-  transform: rotate(135deg);
+bottom: 0;
+transform: rotate(135deg);
 }
 .hamburger-menu.active span:before, .hamburger-menu.active span:after { transition-delay: 0s, 0.3s; }
- @keyframes 
+@keyframes 
 bounce {  0% {
- transform: rotate(0);
+transform: rotate(0);
 }
- 45% {
- transform: rotate(15deg);
+45% {
+transform: rotate(15deg);
 }
- 90% {
- transform: rotate(-7deg);
+90% {
+transform: rotate(-7deg);
 }
- 100% {
- transform: rotate(0);
+100% {
+transform: rotate(0);
 }
 }
 #bg-img {
-  height:100vh;
-  width: 100vw;
-  background-image: (url(/assets/img/html-code.webp),url(/assets/img/html-code.jpg));
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(4px);
+height:100vh;
+width: 100vw;
+background-image: (url(/assets/img/html-code.webp),url(/assets/img/html-code.jpg));
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+filter: blur(4px);
 }
 #splashText {
-  h1 {
-    color: #ccc;
-    font-size: calc(48px + 1.5vw);
-    @media screen and (max-width:1440) {
-        font-size: 66px;
-    }
+h1 {
+  color: #ccc;
+  font-size: calc(48px + 1.5vw);
+  @media screen and (max-width:1440) {
+      font-size: 66px;
   }
-  p {
-    color: #ccc;
-    font-size: calc(10px + 1vw);
-    @media screen and (max-width:1440) {
-        font-size: 22px;
-    }
+}
+p {
+  color: #ccc;
+  font-size: calc(10px + 1vw);
+  @media screen and (max-width:1440) {
+      font-size: 22px;
   }
-  z-index: 99;
-  width: calc(100vw - 50px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: top 4s;
+}
+z-index: 99;
+width: calc(100vw - 50px);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: top 4s;
 }
 #overlay {
-    display: block;
-    margin: 0;
-    padding: 0;
-    z-index: 2;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
 }
