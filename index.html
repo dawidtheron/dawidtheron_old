@@ -14,35 +14,55 @@
     <title>Dawid Theron | Freelance Front-end Developer</title>
   </head>
   <body>
-    <div class="container-fluid p-0">
-      <div class="menu-overlay"></div>
-      <div class="menu">
-        <div class="hamburger-menu-wrapper">
-          <button class="hamburger-menu">
-            <span>toggle menu</span>
-          </button>
-        </div>
-        <div class="menu-list">
-          <a href="#home">home</a><br>
-          <a href="mailto:info@dawidtheron.me">enquiries</a><br>
-          <a class="nav-link-dropdown-toggle" data-toggle="dropdown" href="#projects" aria-haspopup="true" aria-expanded="false">projects</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://edge.dawidtheron.now.sh/" target="_blank">edge</a>
-            <a class="dropdown-item" href="https://dawidtheron.myportfolio.com/" target="_blank">user interface & graphic design</a>
-            <a class="dropdown-item" href="/email_signature.html" target="_blank">html email signature</a>
-            <a class="dropdown-item" href="https://steenbok.netlify.app" target="_blank">steenbok farm cottages</a>
-          </div>
-        </div>
+    <!-- navigation -->
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-xl-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:info@dawidtheron.me">enquiries</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink-projects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                projects
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-projects">
+                <a class="dropdown-item" href="https://edge.dawidtheron.now.sh/" target="_blank">edge</a>
+                <a class="dropdown-item" href="https://dawidtheron.myportfolio.com/" target="_blank">user interface & graphic design</a>
+                <a class="dropdown-item" href="/email.html" target="_blank">html email signature</a>
+                <a class="dropdown-item" href="https://steenbok.netlify.app/" target="_blank">steenbok farm cottages</a>
+              </div>
+            </li>
+        </ul>
       </div>
-      <div id="content">
-        <div class="col text-center" id="splashText">
-          <h1 class="display-4 text-break">Front-end Developer</h1>
-          <p class="lead text-break">freelance user interface design & front-end development by Dawid Theron</p>        
-        </div>
-        <div id="overlay"></div>
-        <div id="bg-img"></div>
-      </div> 
-    </div>
+      <div class="navbar">
+        <a href="mailto:info@dawidtheron.me">
+          <i class="fa fa-envelope text-light p-4" aria-hidden="true"></i>
+        </a>
+        <a href="https://wa.me/27833017754">
+          <i class="fa fa-whatsapp text-light p-4" aria-hidden="true"></i>
+        </a>
+      </div>
+      
+    </nav>
+  <!-- end navigation -->
+
+    <div id="content">
+      <div class="col text-center" id="splashText">
+        <h1 class="display-4 text-break">Front-end Developer</h1>
+        <p class="lead text-break">freelance user interface design & front-end development by Dawid Theron</p>        
+      </div>
+      <div id="overlay"></div>
+      <div id="bg-img"></div>
+    </div> 
+
+
     <script src="/JS/jquery-3.5.1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

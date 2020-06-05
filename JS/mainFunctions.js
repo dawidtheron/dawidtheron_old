@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/* $(document).ready(function () {
     'use strict';
         $('.hamburger-menu').click(function (e) {
             e.preventDefault();
@@ -17,3 +17,4 @@ $(document).ready(function () {
         }
     })
 })
+ */
