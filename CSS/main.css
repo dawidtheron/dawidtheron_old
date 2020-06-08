@@ -34,7 +34,7 @@ body {
 
 .navbar button {
   border: none;
-  margin: 15px;
+  margin-left: 15px;
 }
 
 .dropdown-menu {
