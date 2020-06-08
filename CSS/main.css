@@ -157,7 +157,7 @@ body {
 #imgCred {
   color: #ffffff;
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   z-index: 2;
   font: 200 10px Sans-serif;
@@ -206,5 +206,21 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  font: 200 'sans-serif';
+  color: #ccc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

@@ -68,7 +68,7 @@ body {
 #imgCred {
   color: #ffffff;
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   z-index: 2;
   font: 200 10px Sans-serif;
@@ -105,4 +105,15 @@ p {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.3);
+}
+#footer {
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  font: 200 'sans-serif';
+  color: #ccc;
+  justify-content: center;
+  align-items: center;
 }
