@@ -1,3 +1,5 @@
+@import '_mixins.scss';
+
 body {
   background-color: #222222;
 }
@@ -7,7 +9,7 @@ body {
   padding: 10px;
 }
 #topNav {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #topNavLogo {
   max-width: 80px;
@@ -38,6 +40,78 @@ body {
     color: #fff;
   }
 }
+// end menu
+
+.page-section {
+  position: relative;
+  z-index: 1;
+}
+#imgCred {
+  color: #ffffff;
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  z-index: 2;
+  font: 200 10px Sans-serif;
+}
+#splashText {
+  h1 {
+    color: #ccc;
+    font-size: calc(48px + 1.5vw);
+    @media screen and (max-width:1440) {
+        font-size: 66px;
+    }
+  }
+  p {
+    color: #ccc;
+    font-size: calc(10px + 1vw);
+    @media screen and (max-width:1440) {
+        font-size: 22px;
+      }
+    }
+  z-index: 99;
+  width: calc(100vw - 50px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 4s;
+}
+#services-content {
+  z-index: 99;
+  width: calc(100vw - 50px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#enquiries-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  position: absolute;
+  top: 65vh;
+  left: 0px;
+  transform: translateY(-50%);
+  h1 {
+    font-weight: 200;
+    font-size: calc(32px + 1.5vw);
+    @media screen and (max-width:1440) {
+        font-size: 66px;
+    }
+  }
+}
+#footer {
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  font: 200 'sans-serif';
+  color: #ccc;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes hueChange {
   0% {filter:hue-rotate(0deg) blur(4px)}
   10% {filter:hue-rotate(60deg) blur(4px)}
@@ -51,69 +125,17 @@ body {
   90% {filter:hue-rotate(60deg) blur(4px)}
   100% {filter:hue-rotate(0deg) blur(4px)}
 }
-#bg-img {
-  height:100vh;
-  width: 100vw;
-  position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.bg-img-frontpage {
+  @include bgImg;
   background-image: (url(/assets/img/html-code.webp),url(/assets/img/html-code.jpg));
-  filter:hue-rotate(0deg) blur(4px);
   animation: hueChange 30s infinite;
 }
-
-
-#imgCred {
-  color: #ffffff;
-  position: absolute;
-  bottom: 50px;
-  right: 20px;
-  z-index: 2;
-  font: 200 10px Sans-serif;
+.bg-img-services {
+  @include bgImg;
+  background-image: (url(/assets/img/edho-pratama-unsplash.webp),url(/assets/img/edho-pratama-unsplash.jpg));
+  filter: blur(4px);
 }
-#splashText {
-h1 {
-  color: #ccc;
-  font-size: calc(48px + 1.5vw);
-  @media screen and (max-width:1440) {
-      font-size: 66px;
-  }
-}
-p {
-  color: #ccc;
-  font-size: calc(10px + 1vw);
-  @media screen and (max-width:1440) {
-      font-size: 22px;
-    }
-  }
-  z-index: 99;
-  width: calc(100vw - 50px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: top 4s;
-}
-#overlay {
-  display: block;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-#footer {
-  position: absolute;
-  bottom: 0px;
-  height: 60px;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.3);
-  font: 200 'sans-serif';
-  color: #ccc;
-  justify-content: center;
-  align-items: center;
+.bg-img-enquiries {
+  @include bgImg;
+  background-image: (url(/assets/img/map.webp),url(/assets/img/map.png));
 }
