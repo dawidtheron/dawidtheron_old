@@ -1,13 +1,22 @@
+// imports
 @import '_mixins.scss';
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+// body
 body {
   background-color: #222222;
 }
+
+// icons
 .fa {
   font-size: 22px;
   color: #fff;
   padding: 10px;
 }
+
 #topNav {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -40,101 +49,153 @@ body {
     color: #fff;
   }
 }
-// end menu
-
-.page-section {
-  position: relative;
-  z-index: 1;
-}
-#imgCred {
-  color: #ffffff;
+.btn {
   position: absolute;
-  bottom: 50px;
-  right: 20px;
-  z-index: 2;
-  font: 200 10px Sans-serif;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #fff;
+  color: #fff;
+  margin: 50px auto;
+  padding: 10px;
+  width:150px;
+  transition: background-color 1s, width 1s;
+}
+.btn:hover {
+  border: 3px solid #fff;
+  color: #333;
+  width: 100%;
+  background-color: #fff;
+  top: 298px;
+}
+
+// each section
+section {
+  scroll-snap-align: start;
+}
+
+// frontpage
+#hero {
+  background: linear-gradient(darkred, red);
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
 }
 #splashText {
+  position: relative;
   h1 {
     color: #ccc;
     font-size: calc(48px + 1.5vw);
-    @media screen and (max-width:1440) {
-        font-size: 66px;
+    @media screen and (max-width:380px) {
+      font-size: 36px;
+  }
+    @media screen and (min-width:1440px) {
+        font-size: 63px;
     }
   }
-  p {
+  h2 {
     color: #ccc;
-    font-size: calc(10px + 1vw);
-    @media screen and (max-width:1440) {
-        font-size: 22px;
+    font-size: calc(32px + 1.5vw);
+    @media screen and (max-width:380px) {
+        font-size: 24px;
       }
-    }
-  z-index: 99;
+    @media screen and (min-width:1440px) {
+        font-size: 42px;
+      }
+  }
+  p {
+    color: #fff;
+    font-size: calc(10px + 1.5vw);
+    @media screen and (max-width:380px) {
+        font-size: 14px;
+      }
+    @media screen and (min-width:1440px) {
+        font-size: 21px;
+      }
+  }
   width: calc(100vw - 50px);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: top 4s;
 }
-#services-content {
-  z-index: 99;
-  width: calc(100vw - 50px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+// services section
+#services {
+  background: linear-gradient(rgb(0, 33, 95), rgb(0, 4, 255));
+  height: 100vh;
+  position: relative;
+  padding-top: 120px;
+  transition: margin-top 2s;
+  p {
+    color: #fff;
+  }
+  h1 {
+    color: #ccc;
+    font-size: calc(24px + 1.5vw);
+    @media screen and (max-width:1440) {
+        font-size: 30px;
+    }
+    @media screen and (max-width:520px) {
+      margin-top: 75px;
+    }
+  }
+  ul  {
+    li {
+    color: #ccc;
+    font-weight: 200;;
+    line-height: 40px;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    }
+    p {
+      font-style: italic;
+      letter-spacing: 0.5em;
+      color: #fff;
+    }
+  }
+}
+
+// carousel
+.carousel-indicators {
+  top: 0;
+}
+.carousel-inner {
+  height: 90vh;
+  padding: 50px 75px;
+}
+
+// enquiries section
+#enquiries {
+  height: 100vh;
+  position: relative;
+  #enquiries-heading {
+    color: #555;
+    font-size: calc(24px + 1.5vw);
+    text-shadow:  0px 5px 10px #fff;
+    transition: margin-top 2s;
+    @media screen and (max-width:1440) {
+        font-size: 30px;
+    }
+    @media screen and (max-width:520px) {
+      margin-top: 75px;
+    }
+  }
 }
 #enquiries-content {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #fff;
-  z-index: 99;
   position: absolute;
-  top: 65vh;
+  top: 50vh;
   left: 0px;
   transform: translateY(-50%);
   h1 {
     font-weight: 200;
-    font-size: calc(32px + 1.5vw);
+    font-size: calc(24px + 1.5vw);
     @media screen and (max-width:1440) {
-        font-size: 66px;
+        font-size: 30px;
     }
   }
-}
-#footer {
-  position: absolute;
-  bottom: 0px;
-  height: 60px;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  font: 200 'sans-serif';
-  color: #ccc;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes hueChange {
-  0% {filter:hue-rotate(0deg) blur(4px)}
-  10% {filter:hue-rotate(60deg) blur(4px)}
-  20% {filter:hue-rotate(120deg) blur(4px)}
-  30% {filter:hue-rotate(180deg) blur(4px)}
-  40% {filter:hue-rotate(240deg) blur(4px)}
-  50% {filter:hue-rotate(300deg) blur(4px)}
-  60% {filter:hue-rotate(240deg) blur(4px)}
-  70% {filter:hue-rotate(180deg) blur(4px)}
-  80% {filter:hue-rotate(120deg) blur(4px)}
-  90% {filter:hue-rotate(60deg) blur(4px)}
-  100% {filter:hue-rotate(0deg) blur(4px)}
-}
-.bg-img-frontpage {
-  @include bgImg;
-  background-image: (url(/assets/img/html-code.webp),url(/assets/img/html-code.jpg));
-  animation: hueChange 30s infinite;
-}
-.bg-img-services {
-  @include bgImg;
-  background-image: (url(/assets/img/edho-pratama-unsplash.webp),url(/assets/img/edho-pratama-unsplash.jpg));
-  filter: blur(4px);
 }
 .bg-img-enquiries {
   @include bgImg;

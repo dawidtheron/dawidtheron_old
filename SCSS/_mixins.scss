@@ -1,8 +1,10 @@
 @mixin bgImg {
     height:100vh;
     width: 100vw;
-    position: relative;
-    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 

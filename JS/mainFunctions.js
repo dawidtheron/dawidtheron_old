@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     const menuDropdown = $('#navbarDropdownMenuLink-projects')
@@ -8,10 +7,9 @@ $(document).ready(function () {
     })
 });
 
-$('#content').load('frontpage.html').ready(function () {
+/* $('#content').load('frontpage.html').ready(function () {
     $('#page-section').addClass('bg-img-frontpage');
 });
-
 $('#services').click(function () {
     $('#content').load('services.html');
     $('#page-section').addClass('bg-img-services').css('animation', 'none');
@@ -24,3 +22,4 @@ $('#enquiries').click(function () {
     $('#content').load('enquiries.html');
     $('#page-section').addClass('bg-img-enquiries').css('animation', 'none');
 });
+ */
