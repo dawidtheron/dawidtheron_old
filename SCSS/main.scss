@@ -51,14 +51,14 @@ body {
 }
 .btn {
   position: absolute;
-  top: 300px;
+  top: 260px;
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid #fff;
   color: #fff;
   margin: 50px auto;
   padding: 10px;
-  width:150px;
+  width: 150px;
   transition: background-color 1s, width 1s;
 }
 .btn:hover {
@@ -66,7 +66,7 @@ body {
   color: #333;
   width: 100%;
   background-color: #fff;
-  top: 298px;
+  top: 258px;
 }
 
 // each section

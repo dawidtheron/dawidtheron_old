@@ -52,7 +52,7 @@ body {
 
 .btn {
   position: absolute;
-  top: 300px;
+  top: 260px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -70,7 +70,7 @@ body {
   color: #333;
   width: 100%;
   background-color: #fff;
-  top: 298px;
+  top: 258px;
 }
 
 section {
