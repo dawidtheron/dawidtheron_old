@@ -151,9 +151,7 @@ section {
   background: linear-gradient(#00215f, #0004ff);
   height: 100vh;
   position: relative;
-  padding-top: 120px;
-  -webkit-transition: margin-top 2s;
-  transition: margin-top 2s;
+  padding-top: 110px;
 }
 
 #services p {
@@ -180,7 +178,7 @@ section {
 #services ul li {
   color: #ccc;
   font-weight: 200;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 1rem;
   letter-spacing: 0.2em;
 }
@@ -197,7 +195,7 @@ section {
 
 .carousel-inner {
   height: 90vh;
-  padding: 50px 75px;
+  padding: 50px 40px;
 }
 
 #enquiries {
@@ -236,6 +234,7 @@ section {
 }
 
 #enquiries-content h1 {
+  color: #fff;
   font-weight: 200;
   font-size: calc(24px + 1.5vw);
 }

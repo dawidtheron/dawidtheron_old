@@ -125,8 +125,7 @@ section {
   background: linear-gradient(rgb(0, 33, 95), rgb(0, 4, 255));
   height: 100vh;
   position: relative;
-  padding-top: 120px;
-  transition: margin-top 2s;
+  padding-top: 110px;
   p {
     color: #fff;
   }
@@ -144,7 +143,7 @@ section {
     li {
     color: #ccc;
     font-weight: 200;;
-    line-height: 40px;
+    line-height: 30px;
     font-size: 1rem;
     letter-spacing: 0.2em;
     }
@@ -162,7 +161,7 @@ section {
 }
 .carousel-inner {
   height: 90vh;
-  padding: 50px 75px;
+  padding: 50px 40px;
 }
 
 // enquiries section
@@ -190,6 +189,7 @@ section {
   left: 0px;
   transform: translateY(-50%);
   h1 {
+    color: #fff;
     font-weight: 200;
     font-size: calc(24px + 1.5vw);
     @media screen and (max-width:1440) {
