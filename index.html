@@ -17,7 +17,6 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-  <div data-spy></div>
   <!-- navigation -->
   <nav class="fixed-top px-3" id="topNav">
     <div class="row">
@@ -84,15 +83,25 @@
   <div class="container-fluid" id="main-wrapper">
 
     <!-- hero section -->
-    <section class="row scroll-indicator" data-scroll-indicator-title="hero" id="hero">
-      <div class="col text-center" id="splashText">
-        <h1>DESIGNER / DEVELOPER</h1>
-        <p>I'm a South-African based freelance front-end web designer & developer</p>
-        <img src="/assets/img/autograph_wht.png" alt="">
-        <a href="#enquiries">
-          <button class="btn">Contact Me</button>
-        </a>
+    <section class="scroll-indicator" data-scroll-indicator-title="hero" id="hero">
+      <div id="hero-header">
+        <img src="/assets/img/designer-illustrator.png" alt="">
       </div>
+      <div id="hero-description">
+        <p>I'm a South-African based freelance graphic designer / developer / illustrator
+          specializing in the design &
+          develop of digital assets to enhance the authenticity of your brand.</p>
+      </div>
+      <div>
+        <img id="autograph" src="/assets/img/autograph_wht.png" alt="">
+      </div>
+      <div>
+        <a href="mailto:info@dawidtheron.me">
+          <img id="sticky-note" src="/assets/img/sticky-note-send-email.png" alt="">
+        </a>
+
+      </div>
+
     </section>
     <!-- end hero section -->
 
@@ -108,11 +117,9 @@
           <div class="carousel-item active">
             <ul class="d-block w-100" id="services-list">
               <p>services.</p>
+              <li>Brand & Identity Development</li>
               <li>User Interface Design</li>
-              <li>Front-end Web Development</li>
-              <li>Customizing Wordpress Sites</li>
-              <li>Email Signature/Newsletter Design & Development</li>
-              <li>Branding & Identity Design</li>
+              <li>Visual Assets For Your Brand</li>
             </ul>
           </div>
           <div class="carousel-item">
@@ -128,6 +135,7 @@
               <li>Adobe XD</li>
               <li>Adobe Photoshop</li>
               <li>Affinity Designer</li>
+              <li>Procreate</li>
             </ul>
           </div>
           <div class="carousel-item">
@@ -151,10 +159,10 @@
       id="enquiries">
       <div class="card-block col-sm-8 p-3" id="enquiries-content">
         <div>
-          <h1 class="text-white">
+          <h1 class="text-light">
             +2783 301 7754
           </h1>
-          <h1 class="text-white">
+          <h1 class="text-light">
             info@dawidtheron.me
           </h1>
           <p class="lead-text text-light">Tulbagh, Western Cape, South-Africa</p>

@@ -77,35 +77,20 @@ section {
 // frontpage
 #hero {
   background: linear-gradient(darkred, red);
-  height: 100vh;
-  position: relative;
-  scroll-snap-align: start;
+  //height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 160px;
 }
-#splashText {
-  position: relative;
-  h1 {
-    color: #ccc;
-    font-size: calc(48px + 1.5vw);
-    @media screen and (max-width:380px) {
-      font-size: 36px;
-  }
-    @media screen and (min-width:1440px) {
-        font-size: 63px;
-    }
-  }
-  h2 {
-    color: #ccc;
-    font-size: calc(32px + 1.5vw);
-    @media screen and (max-width:380px) {
-        font-size: 24px;
-      }
-    @media screen and (min-width:1440px) {
-        font-size: 42px;
-      }
-  }
+#hero-description {
   p {
     color: #fff;
-    font-size: calc(10px + 1.5vw);
+    max-width: 600px;
+    padding: 20px 20px;
+    text-align: justify;
+    font-size: calc(10px + 1.2vw);
     @media screen and (max-width:380px) {
         font-size: 14px;
       }
@@ -113,17 +98,16 @@ section {
         font-size: 21px;
       }
   }
-  width: calc(100vw - 50px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
+#autograph {
+  padding: 20px;
+}
+
 
 // services section
 #services {
   background: linear-gradient(rgb(0, 33, 95), rgb(0, 4, 255));
-  height: 100vh;
+  //height: 100vh;
   position: relative;
   padding-top: 110px;
   p {
@@ -166,7 +150,7 @@ section {
 
 // enquiries section
 #enquiries {
-  height: 100vh;
+  //height: 100vh;
   position: relative;
   #enquiries-heading {
     color: #555;

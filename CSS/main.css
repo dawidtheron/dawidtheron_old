@@ -80,76 +80,47 @@ section {
 #hero {
   background: -webkit-gradient(linear, left top, left bottom, from(darkred), to(red));
   background: linear-gradient(darkred, red);
-  height: 100vh;
-  position: relative;
-  scroll-snap-align: start;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 160px;
 }
 
-#splashText {
-  position: relative;
-  width: calc(100vw - 50px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-#splashText h1 {
-  color: #ccc;
-  font-size: calc(48px + 1.5vw);
-}
-
-@media screen and (max-width: 380px) {
-  #splashText h1 {
-    font-size: 36px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  #splashText h1 {
-    font-size: 63px;
-  }
-}
-
-#splashText h2 {
-  color: #ccc;
-  font-size: calc(32px + 1.5vw);
-}
-
-@media screen and (max-width: 380px) {
-  #splashText h2 {
-    font-size: 24px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  #splashText h2 {
-    font-size: 42px;
-  }
-}
-
-#splashText p {
+#hero-description p {
   color: #fff;
-  font-size: calc(10px + 1.5vw);
+  max-width: 600px;
+  padding: 20px 20px;
+  text-align: justify;
+  font-size: calc(10px + 1.2vw);
 }
 
 @media screen and (max-width: 380px) {
-  #splashText p {
+  #hero-description p {
     font-size: 14px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  #splashText p {
+  #hero-description p {
     font-size: 21px;
   }
+}
+
+#autograph {
+  padding: 20px;
 }
 
 #services {
   background: -webkit-gradient(linear, left top, left bottom, from(#00215f), to(#0004ff));
   background: linear-gradient(#00215f, #0004ff);
-  height: 100vh;
   position: relative;
   padding-top: 110px;
 }
@@ -199,7 +170,6 @@ section {
 }
 
 #enquiries {
-  height: 100vh;
   position: relative;
 }
 
