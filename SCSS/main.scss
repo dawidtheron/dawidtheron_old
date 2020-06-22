@@ -77,15 +77,14 @@ section {
 // frontpage
 #hero {
   background: linear-gradient(darkred, red);
-  //height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 160px;
 }
-#hero-description {
-  p {
+#hero-description p {
     color: #fff;
     max-width: 600px;
     padding: 20px 20px;
@@ -97,7 +96,6 @@ section {
     @media screen and (min-width:1440px) {
         font-size: 21px;
       }
-  }
 }
 #autograph {
   padding: 20px;
@@ -107,7 +105,6 @@ section {
 // services section
 #services {
   background: linear-gradient(rgb(0, 33, 95), rgb(0, 4, 255));
-  //height: 100vh;
   position: relative;
   padding-top: 110px;
   p {
@@ -150,7 +147,6 @@ section {
 
 // enquiries section
 #enquiries {
-  //height: 100vh;
   position: relative;
   #enquiries-heading {
     color: #555;
