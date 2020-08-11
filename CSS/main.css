@@ -78,8 +78,8 @@ section {
 }
 
 #hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(darkred), to(red));
-  background: linear-gradient(darkred, red);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ac3000), to(#e56000));
+  background: linear-gradient(#ac3000, #e56000);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,8 +122,8 @@ section {
 }
 
 #services {
-  background: -webkit-gradient(linear, left top, left bottom, from(#00215f), to(#0004ff));
-  background: linear-gradient(#00215f, #0004ff);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0046a1), to(#4470d3));
+  background: linear-gradient(#0046a1, #4470d3);
   position: relative;
   padding-top: 110px;
 }
